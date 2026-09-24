@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — Tu Nombre</title>
+<link rel="icon" type="image/png" href="assets/Logo/Logo.png">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=switzer@400,500,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Reenie+Beanie&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="intro" id="intro">
+  <div class="intro-curtain intro-curtain--top" id="introCurtainTop"></div>
+  <div class="intro-curtain intro-curtain--bottom" id="introCurtainBottom"></div>
+  <div class="intro-logo-wrap">
+    <img src="assets/Logo/Logo.png" alt="" class="intro-logo" id="introLogo">
+  </div>
+</div>
+
+<div class="cursor" id="cursor"></div>
+
+<div class="send-success" id="sendSuccess" aria-hidden="true">
+  <p class="send-success-text">Gracias!<br><span class="accent">Tu mensaje ha sido enviado</span> ;)</p>
+</div>
+
+<div class="folder-overlay" id="folderOverlay">
+  <div class="folder-overlay-header">
+    <button type="button" class="folder-back" id="folderBack" data-hover>← Volver</button>
+    <h3 class="folder-overlay-title" id="folderOverlayTitle"></h3>
+    <span class="folder-overlay-count mono" id="folderOverlayCount"></span>
+  </div>
+  <div class="folder-overlay-grid" id="folderOverlayGrid"></div>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <button type="button" class="lightbox-close" id="lightboxClose" data-hover aria-label="Cerrar">✕</button>
+  <img loading="lazy" src="" alt="" class="lightbox-img" id="lightboxImg">
+  <video class="lightbox-video" id="lightboxVideo" controls playsinline></video>
+</div>
+
+<header class="nav">
+  <a href="#work" class="nav-side" data-hover>Trabajo</a>
+  <a href="#top" class="nav-logo">Milena&nbsp;Ivankovic</a>
+  <a href="#contact" class="nav-side nav-side--right" data-hover>Contacto</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+    <span></span><span></span>
+  </button>
+</header>
+
+<div class="menu-overlay" id="menuOverlay">
+  <nav class="menu-links">
+    <a href="#work" data-hover>01 — Trabajo</a>
+    <a href="#about" data-hover>02 — Sobre mí</a>
+    <a href="#contact" data-hover>03 — Contacto</a>
+  </nav>
+</div>
+
+<main id="top">
+
+  <section class="hero">
+    <img src="assets/Logo/Logo.png" alt="" class="hero-bg-logo" aria-hidden="true">
+    <div class="hero-grid">
+
+      <div class="hero-col hero-greeting">
+        <div class="hero-mark-wrap">
+          <span class="hero-scribble-word">Hola</span>
+          <h1 class="hero-mark">
+            <span class="reveal-line"><span>Hola,</span></span>
+            <span class="reveal-line"><span class="accent">soy&nbsp;Milena</span></span>
+          </h1>
+        </div>
+      </div>
+
+      <div class="hero-col hero-video-col">
+        <div class="hero-video-frame" id="heroVideoFrame">
+          <video id="heroVideo" autoplay muted playsinline>
+            <source src="assets/video_home/MVI_7099.mov">
+          </video>
+        </div>
+      </div>
+
+      <div class="hero-col hero-bio">
+        <p class="hero-bio-text">Diseñadora gráfica apasionada por la identidad única, las conversaciones profundas, crear realidades, inventar personajes, paletas cromáticas expresivas y productos que lleguen a las personas con&nbsp;profundidad.</p>
+      </div>
+
+    </div>
+
+    <div class="hero-cta">
+      <a href="#work" class="cta-pill" data-hover>
+        <span class="cta-dot"></span>
+        Ver proyectos
+      </a>
+    </div>
+
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <span class="scroll-line"></span>
+    </div>
+  </section>
+
+  <div class="divider-star-wrap">
+    <svg class="divider-star" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,0 59.55,30.18 89.09,18.83 71.45,45.10 98.75,61.13 67.20,63.72 71.69,95.05 50,72 28.31,95.05 32.80,63.72 1.25,61.13 28.55,45.10 10.91,18.83 40.45,30.18" fill="#ff2ecb"/>
+    </svg>
+  </div>
+
+  <section id="work" class="work">
+    <div class="section-head">
+      <span class="section-label mono">[ 01 / Trabajo ]</span>
+      <h2 class="section-title">Proyectos</h2>
+    </div>
+
+    <div class="project-list">
+
+      <div class="project-item">
+        <button type="button" class="project-row project-row--toggle" data-hover data-carousel-toggle="branding-carousel" aria-expanded="false">
+          <span class="project-index mono">01</span>
+          <span class="project-name">Branding</span>
+          <span class="project-arrow" aria-hidden="true"></span>
+        </button>
+
+        <div class="project-carousel" id="branding-carousel">
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              <div class="carousel-slide">
+                <img loading="lazy" src="assets/proyectos/Branding/PSCL.png" alt="Pascal Paule — packaging">
+              </div>
+              <div class="carousel-slide">
+                <img loading="lazy" src="assets/proyectos/Branding/mf.png" alt="Metamorfosis — tags">
+              </div>
+              <div class="carousel-slide">
+                <img loading="lazy" src="assets/proyectos/Branding/Indomitx.png" alt="Indómitx — perfume">
+              </div>
+              <div class="carousel-slide">
+                <img loading="lazy" src="assets/proyectos/Branding/lamina.png" alt="Indómitx — lámina de materiales">
+              </div>
+              <div class="carousel-slide">
+                <img loading="lazy" src="assets/proyectos/Branding/sp.png" alt="SP — revista">
+              </div>
+              <div class="carousel-slide">
+                <img loading="lazy" src="assets/proyectos/Branding/zen.png" alt="Zen — packaging de bebida">
+              </div>
+              <div class="carousel-slide">
+                <img loading="lazy" src="assets/proyectos/Branding/Render.jpg" alt="Render — branding">
+              </div>
+              <div class="carousel-slide">
+                <img loading="lazy" src="assets/proyectos/Branding/Lamina_Garnier.jpg" alt="Lámina Garnier — branding">
+              </div>
+              <div class="carousel-slide">
+                <img loading="lazy" src="assets/proyectos/Branding/Lamina_Packaging_C2.jpg" alt="Lámina Packaging C2 — branding">
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-controls">
+            <button type="button" class="carousel-arrow carousel-prev" data-hover aria-label="Anterior">←</button>
+            <button type="button" class="carousel-arrow carousel-next" data-hover aria-label="Siguiente">→</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button type="button" class="project-row project-row--toggle" data-hover data-carousel-toggle="animacion-carousel" aria-expanded="false">
+          <span class="project-index mono">02</span>
+          <span class="project-name">Animación</span>
+          <span class="project-arrow" aria-hidden="true"></span>
+        </button>
+
+        <div class="project-carousel" id="animacion-carousel">
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              <div class="carousel-slide">
+                <img loading="lazy" src="assets/proyectos/Animación/posters/Memento.png" alt="Memento — animación" class="is-zoomable" data-hover data-lightbox data-gif="assets/proyectos/Animación/Memento.gif">
+                <span class="carousel-play" aria-hidden="true">▶</span>
+              </div>
+              <div class="carousel-slide">
+                <img loading="lazy" src="assets/proyectos/Animación/posters/Experimento01.png" alt="Experimento 01 — animación" class="is-zoomable" data-hover data-lightbox data-gif="assets/proyectos/Animación/Experimento01.gif">
+                <span class="carousel-play" aria-hidden="true">▶</span>
+              </div>
+              <div class="carousel-slide">
+                <img loading="lazy" src="assets/proyectos/Animación/posters/Rotoscopia.png" alt="Rotoscopia — animación" class="is-zoomable" data-hover data-lightbox data-gif="assets/proyectos/Animación/Rotoscopia.gif">
+                <span class="carousel-play" aria-hidden="true">▶</span>
+              </div>
+              <div class="carousel-slide">
+                <img loading="lazy" src="assets/proyectos/Animación/posters/Animación_Trickster.png" alt="Trickster — animación" class="is-zoomable" data-hover data-lightbox data-gif="assets/proyectos/Animación/Animación_Trickster.gif">
+                <span class="carousel-play" aria-hidden="true">▶</span>
+              </div>
+              <div class="carousel-slide">
+                <img loading="lazy" src="assets/proyectos/Animación/posters/salchicha.png" alt="Salchicha — animación" class="is-zoomable" data-hover data-video="assets/proyectos/Animación/salchicha.mp4">
+                <span class="carousel-play" aria-hidden="true">▶</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-controls">
+            <button type="button" class="carousel-arrow carousel-prev" data-hover aria-label="Anterior">←</button>
+            <button type="button" class="carousel-arrow carousel-next" data-hover aria-label="Siguiente">→</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button type="button" class="project-row project-row--toggle" data-hover data-carousel-toggle="editorial-carousel" data-speed="55" aria-expanded="false">
+          <span class="project-index mono">03</span>
+          <span class="project-name">Editorial</span>
+          <span class="project-arrow" aria-hidden="true"></span>
+        </button>
+
+        <div class="project-carousel" id="editorial-carousel">
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              <div class="carousel-slide carousel-folder" data-hover data-folder="panico">
+                <span class="folder-grid-preview folder-grid-preview--single">
+                  <img loading="lazy" src="assets/proyectos/editorial/PÁNICO/374bc113-83e8-40fa-9847-220cbcec2854.jpg" alt="">
+                </span>
+                <span class="folder-label">
+                  <span class="folder-name">Pánico</span>
+                  <span class="folder-count mono">5 imágenes</span>
+                </span>
+              </div>
+
+              <div class="carousel-slide carousel-folder" data-hover data-folder-lightbox="assets/proyectos/editorial/Arbol_Genealogico/pages/page_01.jpg">
+                <span class="folder-grid-preview folder-grid-preview--single">
+                  <img loading="lazy" src="assets/proyectos/editorial/Arbol_Genealogico/pages/page_01.jpg" alt="">
+                </span>
+                <span class="folder-label">
+                  <span class="folder-name">Árbol Genealógico</span>
+                  <span class="folder-count mono">Ver completo</span>
+                </span>
+              </div>
+              <div class="carousel-slide carousel-folder" data-hover data-folder="paseoahumada">
+                <span class="folder-grid-preview folder-grid-preview--single">
+                  <img loading="lazy" src="assets/proyectos/editorial/Paseo Ahumada/pages/page_01.jpg" alt="">
+                </span>
+                <span class="folder-label">
+                  <span class="folder-name">Paseo Ahumada</span>
+                  <span class="folder-count mono">Ver proyecto</span>
+                </span>
+              </div>
+              <div class="carousel-slide carousel-folder" data-hover data-folder="norte">
+                <span class="folder-grid-preview folder-grid-preview--single">
+                  <img loading="lazy" src="assets/proyectos/editorial/Aves de Chile/Aves del norte/Portada.png" alt="">
+                </span>
+                <span class="folder-label">
+                  <span class="folder-name">Aves del Norte</span>
+                  <span class="folder-count mono">23 páginas</span>
+                </span>
+              </div>
+              <div class="carousel-slide carousel-folder" data-hover data-folder="centro">
+                <span class="folder-grid-preview folder-grid-preview--single">
+                  <img loading="lazy" src="assets/proyectos/editorial/Aves de Chile/Aves del centro/Portada.png" alt="">
+                </span>
+                <span class="folder-label">
+                  <span class="folder-name">Aves del Centro</span>
+                  <span class="folder-count mono">27 páginas</span>
+                </span>
+              </div>
+              <div class="carousel-slide carousel-folder" data-hover data-folder="sur">
+                <span class="folder-grid-preview folder-grid-preview--single">
+                  <img loading="lazy" src="assets/proyectos/editorial/Aves de Chile/Aves del sur/Portada.png" alt="">
+                </span>
+                <span class="folder-label">
+                  <span class="folder-name">Aves del Sur</span>
+                  <span class="folder-count mono">31 páginas</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-controls">
+            <button type="button" class="carousel-arrow carousel-prev" data-hover aria-label="Anterior">←</button>
+            <button type="button" class="carousel-arrow carousel-next" data-hover aria-label="Siguiente">→</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button type="button" class="project-row project-row--toggle" data-hover data-carousel-toggle="ilustracion-carousel" data-speed="65" aria-expanded="false">
+          <span class="project-index mono">04</span>
+          <span class="project-name">Ilustración</span>
+          <span class="project-arrow" aria-hidden="true"></span>
+        </button>
+
+        <div class="project-carousel" id="ilustracion-carousel">
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              <div class="carousel-slide carousel-folder" data-hover data-folder-lightbox="assets/proyectos/Ilustración/Futurama/Futurama.jpg">
+                <span class="folder-grid-preview folder-grid-preview--single">
+                  <img loading="lazy" src="assets/proyectos/Ilustración/Futurama/Futurama.jpg" alt="">
+                </span>
+                <span class="folder-label">
+                  <span class="folder-name">Futurama</span>
+                  <span class="folder-count mono">Ver ilustración</span>
+                </span>
+              </div>
+              <div class="carousel-slide"><img loading="lazy" src="assets/proyectos/Ilustración/Japón.jpg" alt="Japón — ilustración"></div>
+              <div class="carousel-slide"><img loading="lazy" src="assets/proyectos/Ilustración/Haiku.jpg" alt="Haiku — ilustración"></div>
+              <div class="carousel-slide"><img loading="lazy" src="assets/proyectos/Ilustración/punk/punk-is-dead-01.jpg" alt="Punk is Dead 01 — ilustración"></div>
+              <div class="carousel-slide"><img loading="lazy" src="assets/proyectos/Ilustración/punk/punk-is-dead-02.jpg" alt="Punk is Dead 02 — ilustración"></div>
+              <div class="carousel-slide carousel-folder" data-hover data-folder="gatos">
+                <span class="folder-grid-preview">
+                  <img loading="lazy" src="assets/proyectos/Ilustración/Gatos/gato1.jpg" alt="">
+                  <img loading="lazy" src="assets/proyectos/Ilustración/Gatos/gato2.jpg" alt="">
+                  <img loading="lazy" src="assets/proyectos/Ilustración/Gatos/gato3.jpg" alt="">
+                  <img loading="lazy" src="assets/proyectos/Ilustración/Gatos/gato4.jpg" alt="">
+                </span>
+                <span class="folder-label">
+                  <span class="folder-name">Gatos</span>
+                  <span class="folder-count mono">5 ilustraciones</span>
+                </span>
+              </div>
+              <div class="carousel-slide carousel-folder" data-hover data-folder="aves">
+                <span class="folder-grid-preview">
+                  <img loading="lazy" src="assets/proyectos/Ilustración/Aves/Cóndor_.jpg" alt="">
+                  <img loading="lazy" src="assets/proyectos/Ilustración/Aves/Flamenco_Chileno.jpg" alt="">
+                  <img loading="lazy" src="assets/proyectos/Ilustración/Aves/Pingüino_Rey.jpg" alt="">
+                  <img loading="lazy" src="assets/proyectos/Ilustración/Aves/Picaflor.jpg" alt="">
+                </span>
+                <span class="folder-label">
+                  <span class="folder-name">Aves de Chile</span>
+                  <span class="folder-count mono">57 ilustraciones</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-controls">
+            <button type="button" class="carousel-arrow carousel-prev" data-hover aria-label="Anterior">←</button>
+            <button type="button" class="carousel-arrow carousel-next" data-hover aria-label="Siguiente">→</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider-star-wrap divider-star-wrap--dark">
+    <svg class="divider-star divider-star--green" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,0 59.55,30.18 89.09,18.83 71.45,45.10 98.75,61.13 67.20,63.72 71.69,95.05 50,72 28.31,95.05 32.80,63.72 1.25,61.13 28.55,45.10 10.91,18.83 40.45,30.18" fill="#39ff6a"/>
+    </svg>
+  </div>
+
+  <section id="about" class="about">
+    <div class="section-head">
+      <span class="section-label mono">[ 02 / Sobre mí ]</span>
+      <h2 class="section-title">Quién soy</h2>
+    </div>
+    <div class="about-body reveal-fade">
+      <img src="assets/sobre mi/sobre mi.jpg" alt="Milena Ivankovic" class="about-photo">
+      <div class="about-texts">
+        <div class="about-col">
+          <p class="about-text">Soy <span class="accent">diseñadora gráfica</span> y entiendo el diseño como una <span class="accent">herramienta para comunicar con intención</span>. Me interesa desarrollar identidades visuales y sistemas gráficos que no solo sean estéticamente sólidos, sino que también transmitan ideas, generen diálogo y conecten con las personas desde un&nbsp;propósito.</p>
+          <p class="about-text">Mi trabajo nace de la <span class="accent">observación, la investigación y la sensibilidad por los detalles</span>. Creo en un diseño honesto, coherente y consciente, donde cada decisión visual tiene una razón de ser. Busco construir proyectos con identidad, capaces de equilibrar <span class="accent">estrategia, narrativa y expresión&nbsp;visual</span>.</p>
+        </div>
+        <div class="about-col">
+          <p class="about-text">Más que crear piezas atractivas, mi propósito es <span class="accent">diseñar experiencias y mensajes que permanezcan en el tiempo</span>, aportando valor y significado a quienes los&nbsp;reciben.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider-star-wrap divider-star-wrap--dark">
+    <svg class="divider-star divider-star--green" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,0 59.55,30.18 89.09,18.83 71.45,45.10 98.75,61.13 67.20,63.72 71.69,95.05 50,72 28.31,95.05 32.80,63.72 1.25,61.13 28.55,45.10 10.91,18.83 40.45,30.18" fill="#39ff6a"/>
+    </svg>
+  </div>
+
+  <section id="contact" class="contact">
+    <div class="section-head">
+      <span class="section-label mono">[ 03 / Contacto ]</span>
+    </div>
+    <h2 class="contact-title reveal-fade">
+      Hablemos de tu <span class="accent">próximo</span> proyecto.
+    </h2>
+
+    <form
+      class="contact-form reveal-fade"
+      action="https://formsubmit.co/mivankovicsilva@gmail.com"
+      method="POST"
+      id="contactForm"
+    >
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <div class="form-row">
+        <div class="form-field">
+          <label class="form-label mono" for="contactName">[ Nombre ]</label>
+          <input
+            type="text"
+            id="contactName"
+            name="nombre"
+            class="form-input"
+            placeholder="Tu nombre"
+            required
+            autocomplete="off"
+          >
+        </div>
+        <div class="form-field">
+          <label class="form-label mono" for="contactEmail">[ Email ]</label>
+          <input
+            type="email"
+            id="contactEmail"
+            name="email"
+            class="form-input"
+            placeholder="tu@email.com"
+            required
+            autocomplete="off"
+          >
+        </div>
+      </div>
+      <div class="form-field">
+        <label class="form-label mono" for="contactMsg">[ Mensaje ]</label>
+        <textarea
+          id="contactMsg"
+          name="mensaje"
+          class="form-input form-textarea"
+          placeholder="Contame sobre tu proyecto..."
+          required
+          rows="5"
+        ></textarea>
+      </div>
+      <div class="form-footer">
+        <button type="submit" class="form-submit" data-hover>
+          <span class="form-submit-text">Enviar mensaje</span>
+          <span class="form-submit-arrow">→</span>
+        </button>
+        <p class="form-success" id="formSuccess">¡Mensaje enviado! Te respondo pronto.</p>
+      </div>
+    </form>
+
+    <a href="mailto:mivankovicsilva@gmail.com" class="contact-email" data-hover>mivankovicsilva@gmail.com</a>
+    <div class="socials">
+      <a href="https://instagram.com/_mediocreativa_" target="_blank" rel="noopener" data-hover>@_mediocreativa_</a>
+      <a href="https://instagram.com/mili.ivankovic" target="_blank" rel="noopener" data-hover>@mili.ivankovic</a>
+      <a href="https://linkedin.com/in/milena-ivankovic-silva" target="_blank" rel="noopener" data-hover>LinkedIn: Milena Ivankovic Silva</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span class="mono">© 2026 Milena Ivankovic &nbsp;·&nbsp; +56 9 4424 2862</span>
+  <a href="#top" class="mono" data-hover>Volver arriba ↑</a>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
